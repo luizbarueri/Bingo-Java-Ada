@@ -27,13 +27,16 @@ public class Bingo {
             tabelaSorteados[x] = x + 1;
         }
         //cria lista de 33 nome de jogadores
-        String listaNomesT = "Ana-Marta-Tereza-Cristina-Vanessa-Eva-Mariza-Carla-Mirian-Helena-Sheva-Jil-Ada-Hunigan-Clair-Rebeca-Debora";
+        String listaNomesT = "Oliver-Paty-Bruno-Nicolau-Rocha-Cláudio-Helder-" +
+            "Deyse-Rosivan-Cesar-Evandro-Fabio-Marcelo-Jefferson-Daniel-Alex-" +
+            "Otair-Rejane-Edson-Moacyr-Sylas-Clarice-Luiz-Claudio-Paulo-Ademar-Angelo-Dirce";
+
         String[] nomeJogadores = new String[linhas];
         String[] aux = listaNomesT.split("-");
         for (int numeroJ = 0; numeroJ < linhas; numeroJ++) {
-            nomeJogadores[numeroJ] = "Jogador-";
+            nomeJogadores[numeroJ] = "Jogador-" + (numeroJ + 1);
         }
-        for (int nome = 0; nome < linhas; nome++) {
+        for (int nome = 0; nome < aux.length; nome++) {
             nomeJogadores[nome] = aux[nome];
         }
 
